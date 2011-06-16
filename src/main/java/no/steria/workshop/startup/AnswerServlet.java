@@ -14,6 +14,6 @@ public class AnswerServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
-        System.out.println(req.getParameter("q"));
+//        System.out.println(req.getParameter("q"));
     }
 }
