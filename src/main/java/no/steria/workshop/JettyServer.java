@@ -8,13 +8,13 @@ import org.mortbay.jetty.webapp.WebAppContext;
 public class JettyServer {
 
     public static void main(String[] args) throws Exception {
-        Server server = new Server(8086);
+        Server server = new Server(8090);
         server.addHandler(new WebAppContext("src/main/webapp", "/"));
         server.start();
 
         String ip = InetAddress.getLocalHost().getHostAddress();
         int port = server.getConnectors()[0].getLocalPort();
         
-        System.out.println("Started server on http://" + ip + ":" + port + "/");
+        System.out.println("Started server on\n\nhttp://" + ip + ":" + port + "/");
     }
 }
